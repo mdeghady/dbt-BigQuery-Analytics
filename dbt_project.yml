@@ -38,7 +38,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_analytics_engineer_book:
     # Applies to all files under models/example/
-    stripe:
-      +materialized: view
     staging:
-      materialized: table
+      +materialized: table
+    marts:
+      core:
+        +materialized: table
+
