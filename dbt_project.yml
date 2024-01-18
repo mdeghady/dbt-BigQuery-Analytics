@@ -39,8 +39,9 @@ models:
   dbt_analytics_engineer_book:
     # Applies to all files under models/example/
     staging:
-      +materialized: table
+      +materialized: view
+    intermediate:
+      +materialized: view
     marts:
-      core:
-        +materialized: table
+      +materialized: table
 
